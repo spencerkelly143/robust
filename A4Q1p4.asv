@@ -23,9 +23,8 @@ Dzp = 0;
 P = sdpvar(6,6);
 
 gamma = sdpvar(1);
-%using a sector IQC with alpha=0 beta =1
+%using a sector IQC as 
 IQC = [0 1; 1 -2];
-%setting up Pi_gamma
 IQCp = [1 0; 0 -gamma^2];
 
 Bigmat = [eye(6) zeros(6,2); A Bp Bw; Cq Dqp Dqw; zeros(1,6) 1 0;  Cz Dzp Dzw; zeros(1,7) 1];
