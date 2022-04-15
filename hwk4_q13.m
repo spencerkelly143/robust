@@ -12,7 +12,7 @@ tol = 1e-6;
 tau = 0.001;
 del = 0;
 while del < 1
-    tau = tau + 0.0001;
+    tau = tau + tol;
 
     Aqp = [A1, B1, -B1*K/tau; zeros(1,4), 0, -K/(tau * Ti); C1, 0, -1/tau];
     Bqp = [-B1; -1/Tt; 0];
